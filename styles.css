@@ -22,9 +22,14 @@ body {
     position: relative;
 }
 
-.row {
+.row-1 {
     flex: 1;
 }
+
+.row-2 {
+    flex: 1;
+
+} 
 
 /* Sticky position */
 
@@ -188,16 +193,23 @@ h4 {
 }
 
 
-@media screen and (max-width: 600px) {
+/* Responsive  */
+
+@media screen and (max-width: 640px)  {
 .main-wrapper {
-    display: flex;  
-    flex-direction: column;
+     flex-direction: column;
+     position: static;
+     background: black;
+     
 
 }
 
 .row {
-    flex: 1;
+    flex: 100%;
 }
+
+}
+/* 
 
 /* Sticky position */
 
@@ -208,5 +220,3 @@ h4 {
 
 
 
-    
-}
