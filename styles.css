@@ -25,10 +25,12 @@ body {
 
 .row-1 {
     flex: 1;
+    padding: 0 10px;
 }
 
 .row-2 {
     flex: 1;
+    padding: 0 10px;
 
 } 
 
@@ -61,11 +63,13 @@ h4 {
     border-radius: 50%;
     border: 6px solid var(--accent);
     margin-bottom: 10px;
-    animation-name: spin;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 1s;
+    animation-name: fade-from-left;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
 }
+
+
 
 #bday-age {
     background: var(--accent);
@@ -116,13 +120,11 @@ h4 {
     animation-duration: 1.5s;
     animation-timing-function: ease;
     animation-delay: 0.5;
-    animation-iteration-count: infinite;
-    
+    animation-iteration-count: infinite;  
 }
 
 .gift-img:hover {
     animation-play-state: paused;
-
 }
 
 #gift-img-happy:hover {
@@ -147,24 +149,37 @@ h4 {
 
 .bottom-space {
     margin-bottom: 100px;
+}
 
+.slide-in {
+    animation-name: fade-from-right;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    color: var(--accent);
 }
 
 
 /* animations */
 
-@keyframes spin {
+@keyframes fade-from-left {
     0% {
-    }
-
-    50% {
-        scale: 1.1;
-        transform: rotate(0);
+        transform: translateX(-1000px);
     }
 
     100% {
-        transform: rotate(360deg);
-        scale: 1.1;
+         transform: translateX(0px);
+    }
+}
+
+@keyframes fade-from-right {
+    0% {
+        transform: translateX(500px);
+
+    }
+
+    100% {
+        transform: translateX(0px);
     }
 }
 
@@ -196,27 +211,15 @@ h4 {
 
 /* Responsive  */
 
-@media screen and (max-width: 640px)  {
+@media screen and (max-width: 600px) {
+
 .main-wrapper {
-     flex-direction: column;
-     position: static;
-     background: black;
-     
+    flex-direction: column;
 
 }
 
-.row {
-    flex: 100%;
-}
 
-}
-/* 
 
-/* Sticky position */
-
-.sticky {
-    position: static;
-    top: 0;
 }
 
 
