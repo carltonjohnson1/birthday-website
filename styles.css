@@ -190,7 +190,7 @@ h4 {
     }
 
     50% {
-        transform: skew(0.9deg,0.5deg);
+        transform: skew(1.2deg,0.1deg);
     }
 
     100% {
