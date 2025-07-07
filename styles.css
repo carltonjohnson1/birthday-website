@@ -62,7 +62,7 @@ p{
     margin: 0 auto;
     display: flex;  
     position: relative;
-    padding: 80px 10px;
+    padding: 100px 10px;
 }
 
 .row-1 {
@@ -270,6 +270,10 @@ h4 {
 
 .bottom-space {
     margin-bottom: 100px;
+}
+
+.bottom-space-small {
+    margin-bottom: 25px;
 }
 
 .slide-in {
